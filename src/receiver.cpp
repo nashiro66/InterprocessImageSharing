@@ -77,20 +77,25 @@ bool Receiver::Connect()
     //    }
     //}
 
-    if (spout.ReceiveTexture(texture.GetTexId(), GL_TEXTURE_2D, false)) {
-		if (spout.IsUpdated())
-		{
-			texture.Resize(spout.GetSenderWidth(), spout.GetSenderHeight());
-		}
-    }
 
-	spout.BindSharedTexture();
+	// Unbind if connected
+	if (spout.IsConnected())
+		spout.UnBindSharedTexture();
+
+	if (spout.ReceiveTexture())
+	{
+		if (spout.BindSharedTexture()) {
+			ShowLog();
+			return true;
+		}
+	}
+	return false;
+
     if(!spout.IsConnected())
     {
         return false;
     }
 
-	ShowLog();
 
     return true;
 }
