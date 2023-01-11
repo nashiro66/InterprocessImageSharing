@@ -1,8 +1,8 @@
 # InterprocessImageSharing
 ## Build
-1. external/download_externals.bat
-2. generate_proj.bat
+1. To download external libraries, run external/download_externals.bat
+2. To generate vs project, run generate_proj.bat. 
+3. To build, open and build vs projects in the build_sender and build_receiver folders.
 
 ## Usage
-- In build_sender and build_receiver folder, there are vs projects you can build and debug. 
-- Execute both and interprocess image sharing are enabled.
+If execute both sender and receiver, interprocess image sharing is enabled.
