@@ -1,4 +1,8 @@
 # InterprocessImageSharing
+
+## Content
+image sharing system between process using [spout2](https://github.com/leadedge/Spout2).
+
 ## Build
 1. To download external libraries, run external/download_externals.bat
 2. To generate vs project, run generate_proj.bat. 
